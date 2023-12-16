@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOLGIS</title>
+    <link rel="shortcut icon" href="./SOLGIS.jpeg">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-draw/dist/leaflet.draw.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-draw"></script>
+    <script src="https://unpkg.com/leaflet-editable"></script>
+    <script src="https://unpkg.com/leaflet-control-geocoder"></script>
+    
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="{% static 'js/scripts.js' %}"></script>
+</head>
+
+<body>
+    
+    <div class="header">
+        <a href="./deneme.html">Home</a>
+        <a href="about">About</a>
+        <div class="header-dropdown">
+            <span>Other Services</span>
+            <div class="header-dropdown-content">
+                <a href="./knk özür dilerim/Webing/" onclick="navigateToYouTubeDownloader()">YouTube Video Downloader</a>
+                
+            </div>
+        </div>
+    </div>
+    <h1> Map Area Calculator</h1>
+
+    <div class="coordinates">
+        Latitude: <input type="text" id="latitude">
+        Longitude: <input type="text" id="longitude">
+        <button onclick="moveToCoordinates()">Go to Coordinates</button>
+    </div>
+    <div id="search-bar"></div>
+
+    <div id="map"></div>
+
+    <div id="area-display">Area: <span id="area-value">0</span> square meters</div>
+    <button onclick="calculatePanels()">Calculate</button>
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
