@@ -1,0 +1,17 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Page</title>
+  <script src="{% static 'app/js/script.js' %}"></script>
+  <link rel="stylesheet" href="{% static 'app/css/style.css' %}">
+</head>
+<body>
+  {% include 'header.html' %}
+  <img class="homepic" src="{% static 'app/images/sol5.jpeg' %}" alt="Your Image">
+  <h1 class="home-h1">Empowering Solar Ventures with Precision and Insightful Solar Solutions</h1>
+  {% include 'footer.html' %}
+</body>
+</html>

@@ -1,0 +1,17 @@
+{% load static %}
+
+<div class="header" >
+  <img class="header-logo" src="{% static 'app/images/1.svg' %}" alt="Your Image">
+  <div class="menu">
+    
+      <a href="{% url 'index' %}">Home</a>
+      <a href="{% url 'map' %}">Map</a>
+      <a href="{% url 'calculate' %}">Calculate</a>
+      <a href="{% url 'about' %}">About</a>
+      <a href="http://127.0.0.1:8000/admin/">
+          <button >Login</button></a>    
+
+      </div>
+   </div>
+  </div>
+</div>

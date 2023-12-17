@@ -1,0 +1,39 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculate Efficiency</title>
+  <link rel="stylesheet" href="{% static 'app/css/style.css' %}">
+</head>
+<body>
+  {% include 'header.html' %}
+
+  <div class="calculator-container">
+    <div class="logo-form">
+      <img class="form-logo" src="{% static 'app/images/roof.svg' %}" alt="Your Image">
+    </div>
+    <h2>Solar Panel Calculator</h2>
+    <form>
+        <label for="total-space">Total available space for solar panels (m²)</label>
+        <input type="number" id="total-space" name="total-space" placeholder="Enter space in square meters">
+
+        <label for="panel-capacity">Solar panel capacity (Watt)</label>
+        <input type="number" id="panel-capacity" name="panel-capacity" placeholder="Enter panel capacity in watts">
+        
+        <label for="total-space">Width of the solar panel (cm)</label>
+        <input type="number" id="total-space" name="total-space" placeholder="Enter space in square cantimeters">
+
+        <label for="panel-capacity">Height of the solar panel (cm)</label>
+        <input type="number" id="panel-capacity" name="panel-capacity" placeholder="Enter panel capacity in cantimeters">
+        <button type="button">Calculate</button>
+    </form>
+  </div>
+
+
+
+  {% include 'footer.html' %}
+</body>
+</html>
