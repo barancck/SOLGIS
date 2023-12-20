@@ -1,7 +1,11 @@
 {% load static %}
 
 <div class="header" >
-  <img class="header-logo" src="{% static 'app/images/1.svg' %}" alt="Your Image">
+  <div class="clickable-logo">
+      <a href="{% url 'index' %}">
+          <img class="header-logo" src="{% static 'app/images/head2.png' %}" alt="Your Image">
+      </a>
+  </div>
   <div class="menu">
     
       <a href="{% url 'index' %}">Home</a>

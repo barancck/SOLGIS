@@ -2,7 +2,7 @@ var satelliteLayer = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/se
         attribution: '',
         attributionControl: false
     });
-
+    
 var streetLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 attribution: 'Â© OpenStreetMap contributors'
 });
@@ -32,10 +32,15 @@ var drawControl = new L.Control.Draw({
     },
     draw: {
         polygon: {
+            icon: new L.DivIcon({
+            iconSize: new L.Point(5, 5),
+            className: 'leaflet-div-icon leaflet-editing-icon my-own-class'
+    }),
             allowIntersection: false,
             showArea: true,
             shapeOptions: {
                 color: 'red' 
+                
             },
             drawError: {
                 color: 'red', 
@@ -61,9 +66,9 @@ searchContainer.appendChild(searchControl.getContainer());
 
 // Add an event listener to update suggestions dynamically
 searchControl.on('geocoder_suggestion', function (event) {
-var suggestion = event.suggestion.name;
-// Do something with the suggestion (e.g., update UI)
-console.log('Suggestion:', suggestion);
+    var suggestion = event.suggestion.name;
+    // Do something with the suggestion (e.g., update UI)
+    console.log('Suggestion:', suggestion);
 });
 
 document.getElementById('area-value').textContent = '0';
@@ -106,4 +111,41 @@ function calculatePanels() {
     } else {
         resultDiv.innerHTML = "<p>Please draw an area on the map first.</p>";
     }
+}
+
+function handleSlopeChange() {
+    var slopeSelect = document.getElementById('slope-roof');
+    var selectedValue = slopeSelect.value;
+
+    // Check if the selected value is "dont-know"
+    if (selectedValue === 'dont-know') {
+        // Create an input element
+        var inputElement = document.createElement('input');
+        inputElement.type = 'text';
+        inputElement.placeholder = 'Enter slope value';
+
+        // Append the input element to the search-bar div
+        document.getElementById('search-bar').appendChild(inputElement);
+    } else {
+        // Remove any existing input element
+        var existingInput = document.querySelector('#search-bar input');
+        if (existingInput) {
+            existingInput.remove();
+        }
+    }
+}
+
+function calculatePanels() {
+    // Your existing calculatePanels function logic
+    // ...
+}
+function handleSlopeChange() {
+    var select = document.getElementById("slope-roof");
+    var selectedValue = select.options[select.selectedIndex].text;
+    var selectedValueDiv = document.getElementById("selected-value");
+    selectedValueDiv.textContent = "Selected Slope: " + selectedValue;
+
+    // Show or hide the input box based on the selected value
+    var inputBoxContainer = document.getElementById("input-box-container");
+    inputBoxContainer.style.display = (selectedValue === "If you are not sure") ? "block" : "none";
 }

@@ -28,16 +28,25 @@
     <div class="container">
         <div class="small">
             <div id="search-bar"></div>
-            <div id="area-display">Area: <span id="area-value">0</span> square meters</div>
+    
             <label for="slope-roof">Slope of the roof</label>
-            <select id="slope-roof" name="slope-roof">
+            <select id="slope-roof" name="slope-roof" onchange="handleSlopeChange()">
                 <option value="flat">Flat (0-5°)</option>
                 <option value="slightly-inclined">Slightly Inclined (5-10°)</option>
                 <option value="inclined">Inclined (10-20°)</option>
                 <option value="very-inclined">Very İnclined (+20°)</option>
-                
+                <option value="dont-know">If you are not sure</option>
             </select>
-            
+    
+            <!-- Add the following div for displaying the selected value -->
+            <div id="selected-value"></div>
+    
+            <!-- Add an input box for "If you are not sure" option -->
+            <div id="input-box-container" style="display: none; margin-top: 8px;">
+                <label for="not-sure-input">Enter your value:</label>
+                <input type="text" id="not-sure-input">
+            </div>
+    
             <label for="position">Position</label>
             <select id="position-roof" name="position-roof">
                 <option value="north">North</option>
@@ -48,10 +57,9 @@
                 <option value="northwest">Northwest</option>
                 <option value="southeast">Southeast</option>
                 <option value="southwest">Southwest</option>
-
-        
             </select>
             <button onclick="calculatePanels()">Calculate</button>
+            <div id="area-display">Area: <span id="area-value">0</span> m² </div>
         </div>
         <div class="mapc">
             <div id="map"></div>
