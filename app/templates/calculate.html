@@ -23,12 +23,31 @@
         <label for="panel-capacity">Solar panel capacity (Watt)</label>
         <input type="number" id="panel-capacity" name="panel-capacity" placeholder="Enter panel capacity in watts">
         
-        <label for="total-space">Width of the solar panel (cm)</label>
-        <input type="number" id="total-space" name="total-space" placeholder="Enter space in square cantimeters">
+        <label for="slope-roof">Slope of the roof</label>
+        <select id="slope-roof" name="slope-roof">
+            <option value="flat">Flat (0-5°)</option>
+            <option value="slightly-inclined">Slightly Inclined (5-10°)</option>
+            <option value="inclined">Inclined (10-20°)</option>
+            <option value="very-inclined">Very İnclined (+20°)</option>
+            
+        </select>
+        
+        <label for="position">Position</label>
+        <select id="position-roof" name="position-roof">
+            <option value="north">North</option>
+            <option value="south">South</option>
+            <option value="east">East</option>
+            <option value="west">West</option>
+            <option value="northeast">Northeast</option>
+            <option value="northwest">Northwest</option>
+            <option value="southeast">Southeast</option>
+            <option value="southwest">Southwest</option>
 
-        <label for="panel-capacity">Height of the solar panel (cm)</label>
-        <input type="number" id="panel-capacity" name="panel-capacity" placeholder="Enter panel capacity in cantimeters">
+      
+            <!-- Add more options as needed -->
+        </select>
         <button type="button">Calculate</button>
+        <p class="powered-by">Powered by FIORES GLOBAL</p>
     </form>
   </div>
 

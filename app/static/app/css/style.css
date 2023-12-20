@@ -14,33 +14,30 @@ body {
 }
 
 #map {
-    display: flex;
-    
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    border: 2px solid black ;
+    border-radius: 10px;
 }
 
 #area-display {
-    position:relative;
-    top: 40%;
-    left: 10px;
     background-color: rgb(0, 55, 105); /* Dark Blue */
     color: #ffffff; /* White */
     padding: 10px;
     border: 2px solid rgb(0, 55, 105); /* Blue */
     border-radius: 10px;
+    height: 20px;
+    margin-top: 10%;
+    width: 40%;
 }
 
 #search-bar {
-    
-    margin-left: auto;
-    top: 100px;
-    right: 10px;
+    margin-right: 5%;
+    width: 100%;
     z-index: 1000;
     color: #ffffff; /* White */
+
 }
 
 input[type="text"] {
@@ -107,6 +104,7 @@ button:hover {
     color: #ffffff; 
     text-decoration: none;
     margin: 0 15px;
+    
 }
 
 .header a:hover {
@@ -153,6 +151,8 @@ button:hover {
 }
 
 h1, h2 {
+    margin-top: 6%;
+    margin-bottom: 1%;
     text-align: center;
     font-size:25px;
     color: rgb(0, 0, 0);
@@ -206,22 +206,42 @@ footer a:hover {
     text-decoration: underline;
   }
 
-  .calculator-container {
-    background-color: #fff;
-    padding: 20px;
+.powered-by {
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 0%;
+    color: #000000;
+}
+
+.calculator-container {
+    background-color: #ffffff;
+    padding: 40px;
+    padding-bottom: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     max-width: 400px;
     width: 100%;
     margin: auto; /* Center the container horizontally */
+    margin-top: 6%; /* Add margin-top */
+    margin-bottom: 20px; /* Add margin-bottom */
 }
+
 
 label {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
     color: #333;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 
 input {
@@ -252,4 +272,38 @@ button:hover {
 
 .form_logo {
 
+}
+
+.small{
+    display: flex;
+    width: 30%;
+    height: 600px;
+}
+
+#calculation-results{
+    color: #000000;
+    
+}
+
+.container {
+    display: flex;
+    margin-left: 7%;
+    margin-right: 7%;
+    margin-bottom: 5%;
+    margin-top: 0;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.mapc, .small {
+    flex: 1;
+    padding: 10px; 
+}
+.mapc{
+    width: 70%;
+}
+.small{
+    width: 30%;
+    display: inline-block;
 }
