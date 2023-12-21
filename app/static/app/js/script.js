@@ -149,3 +149,4 @@ function handleSlopeChange() {
     var inputBoxContainer = document.getElementById("input-box-container");
     inputBoxContainer.style.display = (selectedValue === "If you are not sure") ? "block" : "none";
 }
+

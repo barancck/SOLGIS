@@ -16,9 +16,11 @@ body {
 
 }
 #map {
-    height: 100%;
-    width: 100%;
+    display: flex;
+    height: 95%;
+    width: 95%;
     text-align: center;
+    justify-content: center;
     border: 2px solid black ;
     border-radius: 10px;
    
@@ -40,7 +42,7 @@ body {
 }
 #search-bar {
     
-    width: 100%;
+    width: 85%;
     color: #ffffff; /* White */
     margin-bottom: 50px; /* Optional: Add margin-bottom for spacing */
 }
@@ -227,8 +229,8 @@ label {
 }
 
 select {
-    width: 100%;
-    padding: 10px;
+    width: 80%;
+    padding: 10px; 
     margin-bottom: 16px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -275,15 +277,17 @@ button:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 }
 
-.mapc, .small {
-    flex: 1;
-    padding: 10px; 
-}
+
 .mapc{
-    width: 70%;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .small{
-    width: 30%;
+    padding-top: 20px;
+    padding-left: 10px;
+    width: 40%;
     display: inline-block;
     height: 600px;
 }

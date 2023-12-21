@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SOLGIS</title>
-    <link rel="shortcut icon" href="./SOLGIS.jpeg">
+    <link rel="icon" href="{% static 'images/form.png' %}" type="image/png">
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet-draw/dist/leaflet.draw.css" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
@@ -23,12 +23,12 @@
 <body>
     {% include 'header.html' %}
     
-    <h1> Map Area Calculator</h1>
+    <h1>SOLAR SIMULATOR</h1>
      
     <div class="container">
         <div class="small">
             <div id="search-bar"></div>
-    
+
             <label for="slope-roof">Slope of the roof</label>
             <select id="slope-roof" name="slope-roof" onchange="handleSlopeChange()">
                 <option value="flat">Flat (0-5°)</option>
@@ -60,6 +60,7 @@
             </select>
             <button onclick="calculatePanels()">Calculate</button>
             <div id="area-display">Area: <span id="area-value">0</span> m² </div>
+            
         </div>
         <div class="mapc">
             <div id="map"></div>
