@@ -5,14 +5,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home Page</title>
-  <script src="{% static 'app/js/script.js' %}"></script>
+  <link rel="icon" href="../static/app/images/tab.png">
   <link rel="stylesheet" href="{% static 'app/css/style.css' %}">
 </head>
 <body>
   {% include 'header.html' %}
-  <div class="welcome">
-  <img class="homepic" src="{% static 'app/images/sol5.jpeg' %}" alt="Your Image">
+  <div class="welcome1">
+    <div class="welcome-div">
+      <p class="welcome-txt">Empowering <br>Solar Ventures <br>With Precision<br> And Insightful<br> Solar Solutions</p>
+      <a class="welcome-btn" href="{% url 'map' %}"><button class="wel-btn">Explore Now</button></a>
+
+    </div>
+    
   </div>
+
+  <div class="welcome2">
+    <div class="welcome2-left">
+      <p class="txt1">SOLGIS provides a cutting-edge software platform that revolutionizes the solar industry by seamlessly integrating satellite imagery and sophisticated analytics.</p>
+    </div>
+    <div class="welcome2-right">
+      <img class="mockup-welcome-image" src="../static/app/images/mockup-done1.png" >
+    </div>
+
+  </div>
+
   {% include 'footer.html' %}
 </body>
 </html>
